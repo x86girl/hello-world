@@ -13,6 +13,8 @@ hello-world.o:
 hello-world: hello-world.o
 	$(CC) -o $@ $^
 
+install: hello-world
+	cp ./$^ /usr/bin/$^
 clean: hello-world
 	rm -f hello-world.o 
 	rm -f hello-world
